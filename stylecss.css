@@ -1,0 +1,908 @@
+*{
+    margin: 0;
+    
+    font-family:Arial;
+    border:border-box;
+}
+
+.navbar{
+    height:60px;
+    width: 100%;
+    background-color: #0f1111;
+    color: white;
+    display: flex; /*makes in one line of a multiple items*/
+    align-items: center; 
+    justify-content: space-evenly; /*space between the items*/
+}
+
+header{
+    top: 0;
+    z-index: 1000;
+    position: sticky;
+}
+
+.nav-logo:hover,
+.nav-address,
+.search-select,
+.search-icon,
+.nav-signin,
+.nav-return,
+.nav-cart
+{
+    cursor: pointer;
+}
+
+.nav-logo{
+    height:55px;
+    width: 100px;
+    margin-left: 0px;
+}
+
+.logo {
+    background-image: url("amazon_logo.png");
+    height: 30px;                   /* Exact height of the original image */
+    width: 100px;                  /* Exact width of the original image */
+    background-size: contain;      /* Ensures the logo never gets cropped */
+    background-repeat: no-repeat;  /* Prevents the logo from tiling */
+    background-position: center;   /* Centers the logo within its box */
+    
+}
+
+.nav-address{
+    padding: 11px 4px;
+}
+
+.border{
+    border: 1.5px solid transparent;
+}
+
+.border:hover{
+    border: 1.5px solid white;
+    border-radius: 2px;
+}
+
+.add-first{
+    color: #cccccc;
+    font-size: 0.76rem;
+    margin-left: 10px;
+}
+
+.add-sec{
+    font-size: 0.90rem;
+    margin-left: 3px;
+    font-weight: 600;
+}
+
+.add-icon{
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav-search{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 560px;
+    height: 36px;
+    border-radius: 2.6px;
+    overflow: hidden;
+    margin-right:-4px ;
+
+}
+
+.nav-search:focus-within{
+    box-shadow: 0 0 0 3px orange;
+}
+     
+.search-select{
+    width: 52px;
+    height: 40px;
+    background-color: #e5e5e5;
+    color: #0f1111;
+    text-align: left;
+    text-indent: 8px;   /* Text Indent is use to create a gap between the border and the elements from left */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.search-select:hover{
+    background-color: #dbdada;
+}
+
+.divider{
+    width: 1px;
+    height: 24px;
+    background-color: #d5d9d9;
+}
+
+.search-input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    padding-left: 8px;
+    color: #0f1111;
+}
+
+.search-input::placeholder{
+    color: #6b7280;
+}
+
+.search-icon{
+    width: 50px;
+    height: 40px;
+    background-color: #febd69;
+    color: #0f1111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.search-icon:hover{
+    background-color: #f3a847;
+}
+
+input{
+    border: none;
+    outline: none;
+}
+
+span{
+    font-size: 0.70rem;
+}
+
+.nav-language{
+    display: flex;
+    align-items: center;
+    padding: 16px 4px;
+    width: 53.5px;
+}
+
+.nav-language i{
+    color: white;
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+.language-select{
+    background: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.language-select option{
+    color: black;
+}
+
+/* ---------- Language Section ---------- */
+
+.nav-language{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.flag{
+    width: 20px;
+    height: 15px;
+    margin-right: 4px;
+}
+
+.lang-text{
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.nav-language i{
+    color: #cccccc;
+    font-size: 10px;
+    margin-left: 2px;
+}
+
+/* Popup */
+
+.language-popup{
+    position: absolute;
+    top: 50px;
+    left: -40px;
+    width: 182.8px;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    padding: 14.5px;
+    display: none;
+    z-index: 999;
+}
+
+.language-popup::before{
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 48px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+}
+
+.nav-language:hover .language-popup{
+    display: block;
+}
+
+/* Heading */
+
+.language-popup h3{
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 18px;
+    color: #565959;
+}
+
+/* Languages */
+
+.language-popup label{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 11px 0;
+    font-size: 11.5px;
+    color: #565959;
+    cursor: pointer;
+}
+
+.language-popup input[type="radio"]{
+    width: 16px;
+    height: 16px;
+    accent-color: blue;
+}
+/* Country */
+.country{
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    margin-bottom: 13.3px;
+    margin-top: 20px;
+    color: #565959;
+    font-size: 11px;
+}
+
+.flag {
+    width: 20px;
+    height: 20.5px;
+    object-fit: contain; /* Shrinks the flag to fit completely inside the boundaries */
+}
+
+
+/* Link */
+
+.language-popup a{
+    color: #007185;
+    font-size: 11.5px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.language-popup a:hover{
+    text-decoration: underline;
+    text-decoration-color: #f08804;
+}
+
+.nav-return{
+    padding: 8.0px 4px;
+    margin-right: -7px;
+}
+
+.nav-second{
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* Start To display on hover you lists and your accounts */
+
+/* Base Container Setup */
+.nav-signin {
+    padding: 10px;
+    padding-left: 3px;
+    padding-right: 1px;
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    margin-right: -6px;
+}
+
+.nav-label {
+    font-size: 12px;
+    margin: 0;
+}
+
+.nav-second {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Dropdown Menu Visibility Logic */
+.account-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: -20px;
+    width: 450px;
+    background: white;
+    border: 1px solid #d5d9d9;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+    padding: 20px;
+    color: black;
+    z-index: 1000;
+    cursor: default;
+}
+
+.nav-signin:hover .account-menu {
+    display: block;
+}
+
+/* Small Top Pointer Arrow */
+.account-menu::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: 60px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-left: 1px solid #d5d9d9;
+    border-top: 1px solid #d5d9d9;
+    transform: rotate(45deg);
+}
+
+/* Top Sign In Button Layout */
+.signin-box {
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f3f3f3;
+    margin-bottom: 15px;
+}
+
+.signin-btn {
+    width: 200px;
+    background: #ffd814;
+    border: 1px solid #fcd200;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.signin-btn:hover {
+    background: #f7ca00;
+}
+
+.new-user {
+    font-size: 12px;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.new-user a {
+    color: #007185;
+    text-decoration: none;
+}
+
+.new-user a:hover {
+    color: #c45500;
+    text-decoration: underline;
+}
+
+/* Bottom Flex Box Columns Layout */
+.menu-columns {
+    display: flex;
+}
+
+.menu-column {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.border-left {
+    border-left: 1px solid #e7e7e7;
+    padding-left: 20px;
+}
+
+/* Link Typographies */
+.account-menu h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.account-menu a {
+    display: block;
+    color: #444;
+    text-decoration: none;
+    font-size: 12.5px;
+    margin: 7px 0;
+}
+
+.account-menu a:hover {
+    color: #e47911;
+    text-decoration: underline;
+}
+/* END */
+
+.nav-cart i{
+    font-size: 35px;
+}
+
+.nav-cart span{
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.nav-cart{
+    padding: 7.5px 4px;
+    margin-right: -6px;
+}
+/* 1. THE MAIN BAR (Applies the uniform background across everything) */
+.panel {
+    height: 40px;
+    background-color: #232f3e; /* Exact Amazon dark blue background */
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; 
+    color: white;             
+    font-family: Helvetica, Arial, sans-serif;
+    padding-left: 5px;
+    white-space: nowrap;      
+}
+
+/* 2. THE "ALL" CONTAINER (Blends smoothly with Today's Deals) */
+.panel-all {
+    display: flex;
+    align-items: center;
+    background-color: transparent; /* Removes separate color to match Today's Deals */
+    cursor: pointer;
+    padding: 9px 8px; /* CHANGE THIS LINE inside your .border class */
+
+}
+
+/* 3. THE 3-BAR ICON */
+.panel-all i {
+    font-size: 1.1rem;             /* Scaled relative to your rem font size */
+    color: white;
+}
+
+/* 4. THE TEXT INSIDE THE SPAN (Matches your font size exactly) */
+.panel-all span {
+    font-size: 0.85rem;            /* MATCHED: Same size as Today's Deals */
+    font-weight: 700;              /* Bold like the official Amazon bar */
+    margin-left: 3px;              /* Clean spacing to prevent clipping */
+    
+    color: white;
+}
+
+/* 5. YOUR UPDATED LINKS CONTAINER */
+.panel-ops {
+    display: flex;                 /* Keeps your navigation links side-by-side */
+    gap: 7px;
+    margin-left: 3px;             /* Creates the gap right after the "All" button */
+    width: 70%;                    /* MAINTAINED: Your custom width layout */
+    font-size: 0.85rem;            /* MAINTAINED: Your custom font size */
+}
+
+.panel-ops p {
+    margin: 0;
+    cursor: pointer;
+}
+
+
+.panelin {
+  width: max-content;        /* Forces the width to exactly match the text content */
+  padding: 0 5px;           /* Adds horizontal spacing between items */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 35px;         /* Optional: makes the clickable area match full height */
+}
+
+.panel-deals{
+    font-weight: 700;
+    height: 36px;
+    align-items: center;
+    white-space: nowrap;
+    display: flex;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-right: 6.4px;
+}
+.back-section{
+    position: relative;
+    overflow: hidden;
+}
+
+.back-section{
+    position: relative;
+    width: 100%;       /* Fills the full width of the screen */
+    height: auto;      /* Dynamically scales height to prevent vertical cutoff */
+    aspect-ratio: 1500 / 638; 
+    background-image: url("primeday._CB633113658_.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.back-section {
+    position: relative;
+    margin-bottom: 0;
+}
+
+.back-section::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -285px;
+    width: 100%;
+    height: 350px; /* Taller height makes the blend much smoother */
+    
+    /* Smooth exponential fade using multi-stops to eliminate the end line */
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 250, 0.4) 50%,
+        rgb(3, 250, 238) 80%,
+        rgb(3, 252, 239) 100%
+    );
+    
+    z-index: 2;
+    pointer-events: none;
+}
+
+/*
+.back-msg {
+    background-color: white;
+    color: black;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    width: 80%;
+    margin-bottom: -7px;
+
+
+}
+
+.back-msg span{
+    font-size: 0.85rem;
+}
+
+.back-msg a{
+     color:#007185;
+}
+
+.back-msg a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+*/
+
+.shop-section{
+    position: relative;
+    margin-top: -2px;   /* Adjust: -250px to -350px */
+    z-index: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #e2e7e6;
+    
+}
+
+.box{
+    height: 400px;
+    border: 2px solid black;
+    width: 23%;
+    background-color: white;
+    padding:20px 0px 15px ;
+    margin-top: 15px;
+    border: none;
+}
+
+.box-img{
+    height: 300px;
+    background-size: cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.box-content{
+    margin-left: 0.36rem;
+    margin-right: 1rem;
+}
+
+.box-content p{
+    color: #007185;
+}
+
+
+.box-img1{
+    height: 300px;
+    background-size: cover;
+    margin-top: 0.30rem;
+    margin-bottom: 0rem;
+}
+
+.box-img2{
+    height: 300px;
+    background-size: cover;
+    margin-top: 0.30rem;
+    margin-bottom: 1.65rem;
+}
+
+.box9 {
+    clear: both;              
+    width: 100%;
+    max-width: 1300px;
+    background-color: white;
+    padding: 10px;
+    margin-top: 15px;  
+    margin-bottom: 3.5px; 
+    box-sizing: border-box;   
+}
+
+.box-content9 {
+    width: 100%;
+}
+
+.box-img9 {
+    width: 100%;                  
+    aspect-ratio: 1000 / 226;     
+    background-size: 100% 100%;   /* FIX: Forces the entire image to stay within the box edges */
+    background-repeat: no-repeat; 
+    background-position: center;  
+}
+.box-img:hover,
+.box-img1:hover,
+.box-img2:hover,
+.box-img9:hover{
+    cursor: pointer;
+}
+
+.box-content p:hover,
+.box-content9 p:hover
+{
+    color:#003F4D;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.box13 {
+    background-color: #ffffff;
+    width: 100%;
+    margin-top: 15px;
+    font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+.recommendations {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 20px;
+    border: 1px solid #D5D9D9;
+    border-radius: 4px;
+    background: #fff;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.recommendations h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0F1111;
+    margin: 0 0 14px;
+}
+
+.recommendations span{
+    font-size:12px ;
+}
+.signin-btn {
+    width: 230px;
+    height: 30px;
+    border: none;
+    border-radius: 50px;
+    background: #FFD814;
+    font-size: 14.50px;
+    color: #0F1111;
+    cursor: pointer;
+    outline: none;
+}
+
+.signin-btn:hover {
+    background: #FFD611;
+}
+
+.new-customer {
+    margin-top: 8px;
+    font-size: 11px;
+    color: #111111;
+}
+
+.new-customer a {
+    font-size: 12px;
+    color: #007185;
+    text-decoration: underline;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 0;
+}
+
+.new-customer a:hover {
+    color: #C7511F;
+}
+
+.footer{
+    margin-top: 15px;
+}
+
+
+.foot-panel1{
+    background-color: #37475a;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.foot-panel1:hover{
+    cursor: pointer;
+    background-color: #485769;
+}
+
+.foot-panel2{
+    background-color:#222f3d ;
+    display: flex;
+    height: 300px;
+    justify-content: space-evenly;
+    color: white;
+    font-weight: 700;
+
+}
+
+.foot-panel2 a{
+    text-decoration:underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 4px; /* Keeps line perfectly spaced under text */
+  text-decoration-thickness: 1px; /* Matches Amazon's thin line */
+}
+
+.foot-panel2 a span {
+    font-size: 0.92rem;
+}
+
+.foot-panel2 a:hover {
+  text-decoration-color: #fff; /* Amazon's signature orange color */
+  cursor: pointer;
+}
+ul{
+    margin-top: 20px;
+}
+ul a{
+    display: block;
+    font-size: 0.92rem;
+    margin-top: 10px;
+    color: #d5d5d5;
+    font-weight: 549;
+}
+
+.foot-panel3{
+    background-color:#222f3d ;
+    color: white;
+    border-top: 0.0000000000000000000001px solid #444c56;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    background-image: url("amazon_logo.png");
+    height: 55px;
+    background-size: cover;
+    width: 100px;
+}
+
+/* FOOTER SERVICES */
+
+.foot-panel4{
+    background-color:#131A22;
+    display:grid;
+    grid-template-columns: repeat(5,120px);
+    justify-content:center;
+    column-gap: 70px;
+    row-gap: 18px;
+    width: 100%;
+    padding:35px 0;
+}
+
+.service{
+    width:110px;
+}
+
+.service a{
+    text-decoration:none;
+}
+
+.service h5{
+    color:#DDD;
+    font-size:12px;
+    margin-bottom:3px;
+}
+
+.service p{
+    color:#999;
+    font-size:12px;
+    line-height:15px;
+    margin:0;
+}
+
+.service h5,
+.service p{
+    text-decoration:underline;
+    text-decoration-color:transparent;
+    text-underline-offset:3px;
+}
+
+.service a:hover h5,
+.service a:hover p{
+    text-decoration-color:white;
+}
+
+/* FOOTER LINKS */
+
+.foot-panel5{
+    background-color:#131A22;
+    text-align:center;
+    padding:15px 0;
+}
+
+.pages{
+    margin-bottom:5px;
+}
+
+.pages a{
+    color:#DDD;
+    text-decoration:none;
+    margin:0 10px;
+    font-size:12px;
+}
+
+.pages a:hover{
+    text-decoration:underline;
+}
+
+.copyright{
+    color:#DDD;
+    font-size:12px;
+}
+
+

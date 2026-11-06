@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="stylecss.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <header class="main.header">
+        <div class="navbar">
+            <div class="nav-logo border" onclick="window.location.reload();">
+                <div class="logo"></div>
+            </div>
+            <div class="nav-address border">
+                <p id="deliver-text" class="add-first" data-i18n="deliver">Delivering to Pune 411005</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="add-sec" data-i18n="location">Update location</p>
+                </div>
+            </div>
+            <div class="nav-search">
+                <select class="search-select">
+
+                    <option data-i18n="all">All</option>
+                    <option data-i18n="allCategories">All Categories</option>
+                    <option data-i18n="alexaSkills">Alexa Skills</option>
+                    <option data-i18n="amazonDevices">Amazon Devices</option>
+                    <option data-i18n="amazonFashion">Amazon Fashion</option>
+                    <option data-i18n="amazonFresh">Amazon Fresh</option>
+                    <option data-i18n="amazonFreshMeat">Amazon Fresh Meat</option>
+                    <option data-i18n="amazonPharmacy">Amazon Pharmacy</option>
+                    <option data-i18n="appliances">Appliances</option>
+                    <option data-i18n="appsGames">Apps & Games</option>
+                    <option data-i18n="audibleAudiobooks">Audible Audiobooks</option>
+                    <option data-i18n="baby">Baby</option>
+                    <option data-i18n="beauty">Beauty</option>
+                    <option data-i18n="books">Books</option>
+                    <option data-i18n="carMotorbike">Car & Motorbike</option>
+                    <option data-i18n="clothingAccessories">Clothing & Accessories</option>
+                    <option data-i18n="collectibles">Collectibles</option>
+                    <option data-i18n="computersAccessories">Computers & Accessories</option>
+                    <option data-i18n="deals">Deals</option>
+                    <option data-i18n="electronics">Electronics</option>
+                    <option data-i18n="furniture">Furniture</option>
+                    <option data-i18n="gardenOutdoors">Garden & Outdoors</option>
+                    <option data-i18n="giftCards">Gift Cards</option>
+                    <option data-i18n="groceryGourmetFoods">Grocery & Gourmet Foods</option>
+                    <option data-i18n="healthPersonalCare">Health & Personal Care</option>
+                    <option data-i18n="homeKitchen">Home & Kitchen</option>
+                    <option data-i18n="industrialScientific">Industrial & Scientific</option>
+                    <option data-i18n="jewellery">Jewellery</option>
+                    <option data-i18n="kindleStore">Kindle Store</option>
+                    <option data-i18n="luggageBags">Luggage & Bags</option>
+                    <option data-i18n="luxuryBeauty">Luxury Beauty</option>
+                    <option data-i18n="moviesTVShows">Movies & TV Shows</option>
+                    <option data-i18n="music">Music</option>
+                    <option data-i18n="musicalInstruments">Musical Instruments</option>
+                    <option data-i18n="officeProducts">Office Products</option>
+                    <option data-i18n="petSupplies">Pet Supplies</option>
+                    <option data-i18n="primeVideo">Prime Video</option>
+                    <option data-i18n="shoesHandbags">Shoes & Handbags</option>
+                    <option data-i18n="software">Software</option>
+                    <option data-i18n="sportsFitnessOutdoors">Sports, Fitness & Outdoors</option>
+                    <option data-i18n="subscribeSave">Subscribe & Save</option>
+                    <option data-i18n="toolsHomeImprovement">Tools & Home Improvement</option>
+                    <option data-i18n="toysGames">Toys & Games</option>
+                    <option data-i18n="videoGames">Video Games</option>
+                    <option data-i18n="watches">Watches</option>
+
+                    </select>
+                    <div class="search-divider"></div>
+                    <input type="text" placeholder="Search  Amazon.in" id="search-box" class="search-input">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+            </div>
+
+            <div class="nav-language border">
+        <img src="https://flagsapi.com/IN/flat/64.png" class="flag">
+        <span class="lang-text">EN</span>
+        <i class="fa-solid fa-caret-down"></i>
+
+        <div class="language-popup">
+
+            <h3>Change Language</h3>
+
+            <label>
+                <input type="radio" name="lang" value="EN" checked>
+                English - EN
+            </label>
+
+            <label>
+                <input type="radio" name="lang" value="HI">
+                हिन्दी - HI
+            </label>
+
+            <label>
+                <input type="radio" name="lang" value="TE">
+                తెలుగు - TE
+            </label>
+            <label>
+                <input type="radio" name="lang" value="BN">
+                বাংলা - BN
+            </label>
+
+            <label>
+                <input type="radio" name="lang" value="MR">
+                मराठी - MR
+            </label>
+
+            
+
+            <div class="country">
+
+                <img src="https://flagsapi.com/IN/flat/64.png" class="flag">
+
+                <span>You are shopping on Amazon.in</span>
+
+            </div>
+
+            <a href="#">Change country/region</a>
+
+        </div>
+
+    </div>
+        
+<div class="nav-signin border">
+    <!-- Trigger text -->
+    <p id="signin-text" class="nav-label" data-i18n="signin">Hello, sign in</p>
+    <p id="account-text" class="nav-second" data-i18n="account">Account & Lists</p>
+    
+    <!-- Dropdown Menu -->
+    <div class="account-menu">
+        <!-- Top Sign In Section -->
+        <div class="signin-box">
+            <button class="signin-btn">Sign in</button>
+            <p class="new-user">New customer? <a href="#">Start here.</a></p>
+        </div>
+
+        <!-- Links Columns Section -->
+    <div class="menu-columns">
+        <!-- Left Column -->
+        <div class="menu-column">
+            <h3 data-i18n="yourlists">Your Lists</h3>
+            <a href="#" data-i18n="createwishlist">Create a Wish List</a>
+            <a href="#" data-i18n="wishfromwebsite">Wish from Any Website</a>
+            <a href="#" data-i18n="babywishlist">Baby Wishlist</a>
+            <a href="#" data-i18n="discoverstyle">Discover Your Style</a>
+            <a href="#" data-i18n="exploreshowroom">Explore Showroom</a>
+        </div>
+
+        <!-- Right Column -->
+        <div class="menu-column border-left">
+            <h3 data-i18n="youraccount">Your Account</h3>
+            <a href="#" data-i18n="youraccount">Your Account</a>
+            <a href="#" data-i18n="yourorders">Your Orders</a>
+            <a href="#" data-i18n="yourwishlist">Your Wish List</a>
+            <a href="#" data-i18n="keepshopping">Keep shopping for</a>
+            <a href="#" data-i18n="yourrecommendations">Your Recommendations</a>
+            <a href="#" data-i18n="yourprimemembership">Your Prime Membership</a>
+            <a href="#" data-i18n="yourprimevideo">Your Prime Video</a>
+            <a href="#" data-i18n="subscribesave">Your Subscribe & Save Items</a>
+            <a href="#" data-i18n="memberships">Memberships & Subscriptions</a>
+            <a href="#" data-i18n="selleraccount">Your Seller Account</a>
+            <a href="#" data-i18n="managecontent">Manage Your Content and Devices</a>
+            <a href="#" data-i18n="musiclibrary">Your Music Library</a>
+            <a href="#" data-i18n="businessaccount">Register for a free Business Account</a>
+        </div>
+    </div>
+</div>
+</div>
+    
+        <div class="nav-return border">
+            <p><span style="font-size: 11.5px;"  data-i18n="returns">Returns</span></p>
+            <p class="nav-second" data-i18n="orders">& Orders</p>
+        </div>
+        <div class="nav-cart border">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-text" data-i18n="cart">Cart</span>
+        </div>
+        </div>
+         </header>
+        <div class="panel">
+            <div class="panel-all border">
+                <i class="fa-sharp-duotone fa-solid fa-bars"></i>
+                <span data-i18n="all">All</span>
+            </div>
+
+        <div class="panel-ops">
+    <p class="panelin border" data-i18n="todayDeals">Today's Deals</p>
+    <p class="panelin border" data-i18n="customerService">Customer Service</p>
+    <p class="panelin border" data-i18n="giftCards">Gift Cards</p>
+    <p class="panelin border" data-i18n="registry">Registry</p>
+    <p class="panelin border" data-i18n="sell">Sell</p>
+    <p class="panelin border" data-i18n="bestsellers">Bestsellers</p>
+    <p class="panelin border" data-i18n="amazonPay">Amazon Pay</p>
+    <p class="panelin border" data-i18n="fashion">Fashion</p>
+</div>
+
+<div class="panel-deals border" data-i18n="panelDeals">
+    Shop deals in Electronics, Computers, Smart Home, and more
+</div>
+        </div>
+
+    <div class="back-section">
+        <div class="back-msg">
+    <!--     <p><span data-i18n="youareon">You are on the Amazon.in website. You can also shop on the Amazon App for a better experience.</span><a data-i18n="clickhere">Click Here to go to amazon.in</a></p>   -->
+        </div>
+    </div>
+
+    <div class="shop-section">
+        <div class="box1 box">
+            <div class="box-content">
+                <h2>Appliances for your home | Up to 55%</h2>
+                <div class="box-img" style="background-image: url('box_1.png');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box2 box">
+            <div class="box-content">
+                <h2>Revamp your home in style</h2>
+                <div class="box-img" style="background-image: url('Screenshot 2026-07-03 085457.png');"></div>
+                <p>Explore all</p>
+            </div>
+        </div>
+        <div class="box3 box">
+            <div class="box-content">
+                <h2>Starting ₹49 | Deals on home essentials</h2>
+                <div class="box-img" style="background-image: url('Screenshot 2026-07-03 085612.png');"></div>
+                <p>Explore all</p>
+            </div>
+        </div>
+        <div class="box4 box">
+            <div class="box-content">
+                <h2>Up to 80% off | Electronics & Accessories</h2>
+                <div class="box-img1" style="background-image: url('Screenshot 2026-07-03 085641.png');"></div>
+                <p>See all offers</p>
+            </div>
+        </div>
+        
+        <div class="box9">
+            <div class="box-content9">
+                <div class="box-img9" style="background-image: url('Screenshot 2026-07-04 151045.png');"></div>
+            </div>
+        </div>
+        <div class="box9">
+            <div class="box-content9">
+                
+                <div class="box-img9" style="background-image: url('Screenshot 2026-07-04 151115.png');"></div>
+            </div>
+        </div>
+
+        <div class="box1 box">
+            <div class="box-content">
+                <h2>Everything You Need for a Clean Home</h2>
+                <div class="box-img" style="background-image: url('Screenshot 2026-07-03 085612.png');"></div>
+                <p>View Collection</p>
+            </div>
+        </div>
+        <div class="box2 box">
+            <div class="box-content">
+                <h2>Curtains, Bedding & Home Styling</h2>
+                <div class="box-img" style="background-image: url('Screenshot 2026-07-03 085703.png');"></div>
+                <p>Discover More</p>
+            </div>
+        </div>
+        <div class="box3 box">
+            <div class="box-content">
+                <h2>Daily Essentials & Car Care Under Budget</h2>
+                <div class="box-img" style="background-image: url('Screenshot 2026-07-03 085737.png');"></div>
+                <p>Check Availability</p>
+            </div>
+        </div>
+        <div class="box4 box">
+            <div class="box-content">
+                <h2>Upgrade Your Smart Home & Tech Gear</h2>
+                <div class="box-img2" style="background-image: url('Screenshot 2026-07-03 085759.png');"></div>
+                <p>Start Saving</p>
+            </div>
+        </div>
+        <div class="box9">
+            <div class="box-content9">
+                <div class="box-img9" style="background-image: url('Screenshot 2026-07-05 140013.png');"></div>
+            </div>
+        </div>
+        <div class="box9">
+            <div class="box-content9">
+                
+                <div class="box-img9" style="background-image: url('Screenshot 2026-07-05 140038.png');"></div>
+            </div>
+        </div>
+        <div class="box1 box">
+            <div class="box-content">
+                <h2>Up to 70% off | Shop from women led brands</h2>
+                <div class="box-img" style="background-image: url('Screenshot 2026-07-05 140638.png');"></div>
+                <p>See all categories</p>
+            </div>
+        </div>
+        <div class="box2 box">
+            <div class="box-content">
+                <h2>Minimum 50% off | Amazon brands & more</h2>
+                <div class="box-img" style="background-image: url('Screenshot 2026-07-05 140326.png');"></div>
+                <p>See all offers</p>
+            </div>
+        </div>
+        <div class="box3 box">
+            <div class="box-content">
+                <h2>50 - 80% off | Sports, outdoor & more</h2>
+                <div class="box-img" style="background-image: url('Screenshot 2026-07-05 140423.png');"></div>
+                <p>See all deals</p>
+            </div>
+        </div>
+        <div class="box4 box">
+            <div class="box-content">
+                <h2>Trending collections from Indian artisans</h2>
+                <div class="box-img2" style="background-image: url('Screenshot 2026-07-05 140403.png');"></div>
+                <p>See all offers</p>
+            </div>
+        </div>  
+        <div class="box9">
+            <div class="box-content9">
+                <div class="box-img9" style="background-image: url('Screenshot 2026-07-05 140139.png');"></div>
+            </div>
+        </div>
+        <div class="box9">
+            <div class="box-content9">
+                
+                <div class="box-img9" style="background-image: url('Screenshot 2026-07-05 140209.png');"></div>
+            </div>
+        </div>
+        <div class="box13">
+    <div class="box-content13">
+        <!-- Recommendations Section -->
+        <div class="recommendations">
+            <h2 data-i18n="seepersonalised">See personalized recommendations</h2>
+            <button data-i18n="signin" class="signin-btn">Sign in</button>
+            <p class="new-customer"><span data-i18n="new">New customer? </span><a href="#" data-i18n="start">Start here.</a></p>
+        </div>
+        
+    </div>
+</div>
+    </div>
+    
+    <hr>
+    <br>
+    <footer>
+        <div class="foot-panel1">
+            <p data-i18n="backtotop">Back to Top</p>
+        </div>
+        <div class="foot-panel2">
+            <ul>
+                <p data-i18n="gettoknow">Get to Know us</p>
+                <a data-i18n="career" >Careers</a>
+                <a data-i18n="blog" >Blog</a>
+                <a data-i18n="about">About Amazon</a>
+                <a data-i18n="investor" >Investor Relations</a>
+                <a data-i18n="amazondev" >Amazon Devices</span></a>
+                <a data-i18n="amazonserv" >Amazon Services</span></a>
+            </ul>
+            <ul>
+                <p data-i18n="connectwith" >Connect with Us</p>
+                <a>Facebook</a>
+                <a>Twitter</a>
+                <a>Instagram</a>
+            </ul>
+            <ul>
+                <p data-i18n="makemoneywithus">Make Money with Us</p>
+                <a data-i18n="sellon">Sell on Amazon</a>
+                <a span data-i18n="sellunder">Sell under Amazon Accelerator</a>
+                <a data-i18n="protectand">Protect and Build Your Brand</a>
+                <a data-i18n="globalsell"> Amazon Global Selling</span></a>
+                <a data-i18n="supplyto">Supply to Amazon</a>
+                <a data-i18n="becomeaffilate">Become an Affiliate</a>
+                <a data-i18n="advertise">Advertise Your Products</a>
+                <a data-i18n="payon">Amazon Pay on Merchants</a>
+            </ul>
+            <ul>
+                <p data-i18n="letushelpyou">Let Us Help You</p>
+                <a data-i18n="youraccount">Your Account</a>
+                <a data-i18n="returnscentre">Returns Centre</a>
+                <a data-i18n="recallsand">Recalls and Product Safety Alerts</a>
+                <a span data-i18n="purchase">100% Purchase Protection</span></a>
+                <a data-i18n="appdownload">Amazon App Download</span></a>
+                <a data-i18n="help">Help</a>
+            </ul>
+        </div>
+        <div class="foot-panel3">
+            <div class="logo"></div>
+        </div>
+
+        <div class="foot-panel4">
+
+    <div class="service">
+    <a href="#">
+        <h5>AbeBooks</h5>
+        <p data-i18n="abebooks">Books, art<br>&amp; collectibles</p>
+    </a>
+</div>
+
+<div class="service">
+    <a href="#">
+        <h5>Amazon Web Services</h5>
+        <p data-i18n="aws">Scalable Cloud<br>Computing Services</p>
+    </a>
+</div>
+
+<div class="service">
+    <a href="#">
+        <h5>Audible</h5>
+        <p data-i18n="audible">Download<br>Audio Books</p>
+    </a>
+</div>
+
+<div class="service">
+    <a href="#">
+        <h5>IMDb</h5>
+        <p data-i18n="imdb">Movies, TV<br>&amp; Celebrities</p>
+    </a>
+</div>
+
+<div class="service">
+    <a href="#">
+        <h5>Shopbop</h5>
+        <p data-i18n="shopbop">Designer<br>Fashion Brands</p>
+    </a>
+</div>
+
+<div class="service">
+    <a href="#">
+        <h5>Amazon Business</h5>
+        <p data-i18n="amazonbusiness">Everything For<br>Your Business</p>
+    </a>
+</div>
+
+<div class="service">
+    <a href="#">
+        <h5>Amazon Music</h5>
+        <p data-i18n="amazonmusic">Stream millions of<br>songs</p>
+    </a>
+</div>
+</div>
+
+<div class="foot-panel5">
+
+    <div class="pages">
+        <a href="#" data-i18n="conditions">Conditions of Use &amp; Sale</a>
+        <a href="#" data-i18n="privacy">Privacy Notice</a>
+        <a href="#" data-i18n="interestads">Interest-Based Ads</a>
+    </div>
+
+    <div class="copyright" data-i18n="copyright">
+        © 1996-2026, Amazon.com, Inc. or its affiliates
+    </div>
+
+</div>
+    </footer>
+    <script src="jsfile.js"></script>
+    <script src="translation.js"></script>
+</body>
+</html>

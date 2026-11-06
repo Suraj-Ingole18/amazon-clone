@@ -1,0 +1,213 @@
+*{             /*Universal Selector*/
+    color: black;
+    margin: 0;
+    padding-left: 0;
+}
+
+h1{
+    color: rgb(156, 114, 114);
+    text-decoration: red wavy line-through;
+    font-weight: lighter;
+}
+p{
+    font-weight: 900;
+    font-family: Verdana;
+    color: green;
+}
+button{
+    color: brown;
+    background-color: bisque;
+    border-radius: 0.3rem;
+}
+body{
+    background-color: azure;
+    background-image: url("mahal_photo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#navbar{
+    height: 50px;
+    background-color: #0f1111;
+    text-decoration-color: rgba(170, 100, 100, 0.082);
+    border-color: red;
+    border-style: solid;
+    border-width: 4px;   
+}
+a{
+    margin-right: 200px;
+    text-decoration: none;
+}
+button{
+    background-color: rgba(224, 228, 24, 1); /*1 is a Opacity which is used to show how the color is bright and light*/
+    color: white;
+}
+
+#logo{
+    font-size: 25px;
+    color: orange;
+}
+
+.box1{
+    height: 400px;
+    width: 400px;
+    background-color: green;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box2{
+    height: 300px;
+    width: 300px;
+    background-color: yellow;
+}
+
+.class1{
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    display: inline-block;
+    border-style: solid;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    
+}
+
+.class2{
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    display: inline-block;
+    border-style: solid;
+    position: relative;
+    top: -25px;
+    left: -25px;
+    transform:scale(2,1); /*scale is used to increase the size of the element by 2 times*/
+}
+/* This is a Property !
+.class2:hover{
+    transition-property: all 2s ease-in;
+    transform:translateX(100px);
+}
+*/
+.class3{
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    display: inline-block;
+    border-style: solid;
+    position: sticky;
+    top: 0px;
+    left: 50px;
+}
+
+.container{
+    
+    height: 200px;
+    width: 1200px;
+    border-style: solid;
+    border-color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+}
+
+.class4{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    margin-bottom: 10px;
+    position:absolute;
+    top: 0px;
+    animation-name: colorAnimation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  /*  animation-timing-function: ease-in; */
+    animation-delay: 0.8s;
+  animation-direction: normal;    
+}
+
+@keyframes colorAnimation{
+    0%{
+        background-color: black;
+    }                                    /*50% is also exist */
+    100%{
+        background-color: brown;
+    }
+    
+    from{
+        left: 0px;
+    }
+    to{
+        left: 200px;
+    }
+}
+
+.class5{
+    height: 100px;
+    width: 100px;
+    background-color: purple;
+    transform: rotate(45deg);
+}
+
+.class5:hover{
+    transition-property: all;
+    transition-duration: 2s;
+    transform:skew(80deg);
+}
+
+.nav{
+    background-color:aquamarine;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: steps(3);
+    transition-delay: 0.5s;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    
+}
+
+li{
+    display: inline;
+    list-style-type: none;
+}
+
+@media(max-width: 600px){
+    .nav{
+        background-color: red;
+    }
+}
+
+.nav:hover{
+    background-color: blue;
+}
+
+.nav:active{
+    background-color: yellow;
+}
+
+#loader{
+    height: 40px;
+    width: 40px;
+    border: 6px solid rgb(148, 148, 180);
+    background-color: white;
+    border-radius: 50%;
+    animation-name: loaderAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+
+
+
+
